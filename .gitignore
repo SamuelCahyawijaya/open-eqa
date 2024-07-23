@@ -14,5 +14,7 @@ data/*
 !data/*.json
 !data/hm3d/*
 !data/scannet/*
+!data/predictions
+!data/metrics
 
 assets/demo_frames/*
