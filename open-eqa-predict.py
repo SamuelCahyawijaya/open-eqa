@@ -69,6 +69,18 @@ def parse_args() -> argparse.Namespace:
         print("output path: {}".format(args.output_path))
     return args
     
+def get_video_path(args, episode_history):
+    # convert Path to string
+    dataset = str(args.dataset)
+    if "open-eqa-v0" in dataset:
+        video_path = f"/share/open-eqa/videos/{episode_history}-0.mp4"
+    elif "caree-eqa-v0" in dataset:
+        #  "episode_history": "caree-v0/caree-1"
+        video_path = f"/share/care-e/testing_videos/{episode_history.split('/')[-1]}.mp4"
+    else:
+        assert False, "Unknown dataset"
+    return video_path
+
 def main(args: argparse.Namespace):
     # Load Model
     if args.method == 'videollama2':        
@@ -123,14 +135,14 @@ def main(args: argparse.Namespace):
             )
         elif args.method == 'videollama2':
             if last_episode_history != episode_history:
-                video_path = f"/share/open-eqa/videos/{episode_history}-0.mp4"
+                video_path = get_video_path(args, episode_history)
                 tensor = videollama2_predict.get_video_tensor(video_path, processor, model)
                 last_episode_history = episode_history
             a = videollama2_predict.generate_reply(tensor, q, model, tokenizer)
             
         elif args.method == 'llava-next':
             if last_episode_history != episode_history:
-                video_path = f"/share/open-eqa/videos/{episode_history}-0.mp4"
+                video_path = get_video_path(args, episode_history)
                 tensor = llava_next_predict.get_video_tensor(video_path, processor, model, for_get_frames_num)
                 last_episode_history = episode_history
             a = llava_next_predict.generate_reply(video_path, tensor, q, model, tokenizer)
