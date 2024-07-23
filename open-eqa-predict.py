@@ -148,9 +148,13 @@ def main(args: argparse.Namespace):
             assert "OPENAI_API_KEY" in os.environ
             image_paths = sorted(glob.glob(f"data/frames/{episode_history}/*.png"))
             filt_image_paths = []
-            for depth_img, rgb_img in zip(image_paths[::30], image_paths[1::30]):
-                filt_image_paths.append(depth_img)
-                filt_image_paths.append(rgb_img)
+            if 'caree' in episode_history:
+                for rgb_img in image_paths[::60]:
+                    filt_image_paths.append(rgb_img)
+            else:
+                for depth_img, rgb_img in zip(image_paths[::30], image_paths[1::30]):
+                    filt_image_paths.append(depth_img)
+                    filt_image_paths.append(rgb_img)
             
             a = ask_gpt4o(
                 question=q,
