@@ -1,0 +1,352 @@
+[
+  {
+    "question": "What is the brown object next to the plant? ",
+    "answer": "The brown object next to the plant is a planter or pot, which is typically used to hold and support the plant. It appears to be made of a material like wood or a wood-like substance, and it's placed on the floor to provide a stable base for the plant to grow in.",
+    "category": "object recognition",
+    "question_id": "1-1",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the object next to the keyboard?",
+    "answer": "The object next to the keyboard appears to be a potted plant.",
+    "category": "object recognition",
+    "question_id": "1-2",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the object that books and a clock are on?",
+    "answer": "The object with books and a clock on it appears to be a shelf or a display unit, possibly in a public space like a lobby or a waiting area. It's a common feature in such settings to provide information or display items for visitors.",
+    "category": "object recognition",
+    "question_id": "1-3",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the object next to the boxes?",
+    "answer": "The object next to the boxes is a potted plant.",
+    "category": "object recognition",
+    "question_id": "1-4",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the object that is leaning next to the yellow cabinet?",
+    "answer": "The object leaning next to the yellow cabinet appears to be a large, cylindrical container or possibly a piece of equipment, possibly related to the function of the building, such as a water tank or a large storage container. It's not entirely clear from the image, but it's a vertical object with a cylindrical shape.",
+    "category": "object recognition",
+    "question_id": "1-5",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What colors are sofa?",
+    "answer": "The sofa in the image is blue.",
+    "category": "attribute recognition",
+    "question_id": "1-6",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What color is the mug?",
+    "answer": "The mug in the image appears to be white.",
+    "category": "attribute recognition",
+    "question_id": "1-7",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What color is the pair of shoes?",
+    "answer": "The pair of shoes in the image is white.",
+    "category": "attribute recognition",
+    "question_id": "1-8",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the object drawn on the yellow bin? ",
+    "answer": "The object drawn on the yellow bin appears to be a smiley face, which is a common symbol used to convey happiness or positivity.",
+    "category": "attribute recognition",
+    "question_id": "1-9",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the color of the box underneath the white and purple box?",
+    "answer": "The box underneath the white and purple box is blue.",
+    "category": "attribute recognition",
+    "question_id": "1-10",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is in between a pair of shoes and trash cans? ",
+    "answer": "There is a potted plant in the middle of the area where the shoes are located.",
+    "category": "spatial understanding",
+    "question_id": "1-11",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Is there space to put a baseball underneath the table? ",
+    "answer": "Yes, there is ample space under the table for a baseball. The area appears to be a spacious indoor area with plenty of room for movement and furniture placement.",
+    "category": "spatial understanding",
+    "question_id": "1-12",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Is there room for a chair in between the blue door and the blue sofa? ",
+    "answer": "Yes, there appears to be space for a chair in between the blue door and the blue sofa. The area looks like a waiting or reception area, and there is ample space for furniture to be arranged.",
+    "category": "spatial understanding",
+    "question_id": "1-13",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the furthest item on the sofa from the clock on the sofa?",
+    "answer": "The furthest item from the clock on the sofa is the person standing on the right side, who appears to be in the middle of the room. The clock is closer to the person on the left side of the sofa. The person on the right is standing at a distance from both the clock and the person on the left, indicating that they are the furthest from the clock.",
+    "category": "spatial understanding",
+    "question_id": "1-14",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Is elevator door opened or closed?",
+    "answer": "The elevator door in the image is closed.",
+    "category": "object state recognition",
+    "question_id": "1-15",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Is the area light turned on?",
+    "answer": "Yes, the area appears to be well-lit, suggesting that the lights are turned on.",
+    "category": "object state recognition",
+    "question_id": "1-16",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Is there natural light in the room?",
+    "answer": "Yes, there is natural light in the room. The lighting appears to be coming from windows or skylights, which suggests that there is daylight entering the space.",
+    "category": "object state recognition",
+    "question_id": "1-17",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Are the books opened?",
+    "answer": "No, the books in the image appear to be closed.",
+    "category": "object state recognition",
+    "question_id": "1-18",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "I am tired and want to take a rest while waiting for the elevator to come. What should I do?",
+    "answer": "If you're tired and looking for a place to rest while waiting for the elevator, you could consider sitting on one of the available benches or chairs in the waiting area. There are several seating options available in the space. If you need to take a break from standing, you can find a spot that is comfortable for you and relax for a few minutes. If you need to charge your phone or have a snack, there are also areas where you can do that. Just be mindful of others and respectful of the space, as it's a shared public area.",
+    "category": "functional reasoning",
+    "question_id": "1-19",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Where can I store a trophy that I earned?",
+    "answer": "It looks like you're in an office or institutional setting, possibly a school or a corporate building, given the hallway design and the presence of lockers and a reception area. If you earned a trophy and you're looking for a place to store it, you could consider the lockers or a designated trophy cabinet or display area within the institution. If there isn't one available, you might need to inquire with the administration or facilities management about creating a space for such an item.",
+    "category": "functional reasoning",
+    "question_id": "1-20",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "how do I go down from the above floor to the below floor?",
+    "answer": "To go down from the floor above to the floor below in this building, you would typically use the elevator provided. In the image, there is an elevator visible on the right side. You would approach it, wait for it to arrive, and then enter the elevator to descend to the desired floor. If you're not sure which floor you're on or which direction the elevator is headed, you can look for signs or ask someone for assistance.",
+    "category": "world knowledge",
+    "question_id": "1-21",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What are the round shapes on the trash bins?",
+    "answer": "The trash bins in the image have round shapes with various symbols or logos on them, which are likely indicative of recycling or waste segregation instructions. These symbols help to guide users on what type of waste to place in each bin. They are commonly used in public spaces to promote proper waste management and recycling practices.",
+    "category": "world knowledge",
+    "question_id": "1-22",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "How can I enter a room?",
+    "answer": "To enter a room, you typically need to find the entrance or doorway that leads to the room you wish to enter. In the image, there appears to be a doorway that leads into a room with a hallway beyond it. You would approach the door, open it if it's unlocked or if you have the appropriate access, and then step through the doorway to enter the room. If the door is locked or requires a code or other form of access, you would need to find the appropriate means to unlock or gain entry, which could be a key, a card reader, or a call to someone who can open the door for you. If you're unsure how to proceed, you might need to ask for assistance from someone in the area or look for additional information about the room's access requirements.",
+    "category": "world knowledge",
+    "question_id": "1-23",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "How many elevators are there?",
+    "answer": "There are two elevators visible in the image.",
+    "category": "object localization",
+    "question_id": "1-24",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Where is the white table?",
+    "answer": "The white table is located in the center of the room, near the entrance to the elevator and the large windows. It appears to be a common area for people to sit and rest or perhaps for meetings or informal gatherings.",
+    "category": "object localization",
+    "question_id": "1-25",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Where is blue door?",
+    "answer": "The blue door is located on the right side of the image, near the end of the hallway. It appears to be a part of a larger entrance or exit area in a building, possibly an office or public facility.",
+    "category": "object localization",
+    "question_id": "1-26",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "How many pairs of shoes are there?",
+    "answer": "There are two pairs of shoes visible in the image.",
+    "category": "object recognition",
+    "question_id": "2-1",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "If I want to study about Python programming language, what should I do? ",
+    "answer": "If you want to study Python programming language, here are some steps you can take:\n\n\n1. **Find Resources:** Look for online tutorials, books, or courses that cover Python. There are many free resources available online, such as Codecademy, Coursera, edX, and Udacity, which offer Python courses.\n\n\n2. **Practice:** Start by practicing simple exercises and coding challenges to get familiar with the syntax and structure of Python.\n\n\n3. **Code Editors and IDEs:** Use an Integrated Development Environment (IDE) like Visual Studio Code, PyCharm, or Jupyter Notebook to write and run Python code.\n\n\n4. **Learn the Basics:** Start with the basics of Python syntax, data types, loops, conditional statements, functions, and object-oriented programming.\n\n\n5. **Libraries and Frameworks:** Learn about the most popular Python libraries and frameworks like NumPy, Pandas, Flask, Django, TensorFlow, and Keras.\n\n\n6. **Projects:** Work on small projects to apply what you've learned. This can be anything from a command-line tool to a web application or a data analysis project.\n\n\n7. **Community:** Join online communities or forums to ask questions, share your work, and learn from others.\n\n\n8. **Certifications:** Consider getting certified in Python programming to demonstrate your proficiency.\n\n\n9. **Continuous Learning:** Python is a constantly evolving language, so stay up-to-date with the latest developments and new libraries by reading blogs, watching videos, and attending conferences.\n\n\n10. **Real-world Applications:** Look for opportunities to apply Python in real-world scenarios, such as data analysis, web development, machine learning, or scientific computing.\n\n\nRemember to practice, read, listen, and write code. Python is a language that is best learned by doing.",
+    "category": "functional reasoning",
+    "question_id": "2-2",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "If I want to study about Python programming language, which color of the book I should read?",
+    "answer": "The book in the image is predominantly white, with some black text and graphics. If you're looking for a book to study Python programming, you should look for one with a similar color scheme, which is likely to be a combination of white or light background with black or dark text for readability. The book's cover design and layout should be clear and easy to read, with a focus on the title and any relevant logos or symbols that indicate it's a Python programming book.",
+    "category": "attribute recognition",
+    "question_id": "2-3",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "I feel I need some suppliment, what should I do?",
+    "answer": "It seems like you're in a well-lit indoor space that could be an office or a public facility with various amenities like seating areas, potted plants, and possibly a reception or waiting area. If you're looking for supplements, you might want to visit a health food store or a pharmacy that offers nutritional supplements. If you're in a public facility, there might be a reception or information desk where you can ask for directions or recommendations for nearby stores. If you're in an office setting, you could also check with your company's HR or wellness department for recommendations. If you're looking for a specific type of supplement, it's best to consult with a healthcare professional or a nutritionist for personalized advice.",
+    "category": "functional reasoning",
+    "question_id": "2-4",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Do you think the hallway should be cleaned?",
+    "answer": "Yes, the hallway appears to be in need of cleaning. The floor is dirty, and there are various items scattered around that could be tidied up. The overall appearance of the space could be improved with a thorough cleaning.",
+    "category": "world knowledge",
+    "question_id": "2-5",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is there any missing item?",
+    "answer": "Yes, there appears to be a missing item in the image. A soccer ball is visible in the foreground, but there is no soccer goal or net present, which is typically associated with a soccer playing area. This suggests that the soccer goal or net is missing from the scene.",
+    "category": "object state recognition",
+    "question_id": "2-6",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is there anything that may be spilling? ",
+    "answer": "There doesn't appear to be any visible spills or leaks in the image. The area looks clean and well-maintained.",
+    "category": "world knowledge",
+    "question_id": "2-7",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Which ball has been moved?",
+    "answer": "The soccer ball in the image has been moved from its original position.",
+    "category": "object state recognition",
+    "question_id": "2-8",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Where is the yellow colored globe in terms of location of baseketball?",
+    "answer": "The yellow globe is located in the center of the room, which is a common area for playing basketball. It's not directly on the basketball court, but rather in the middle of the space where people typically gather to play or practice.",
+    "category": "spatial understanding",
+    "question_id": "2-9",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Where can I sit and rest?",
+    "answer": "In the image, you can see a public space with seating areas where you can sit and rest. There are several benches and chairs available. You can choose to sit on any of these, depending on your preference for comfort and proximity to the facilities or activities you might want to engage in.",
+    "category": "functional reasoning",
+    "question_id": "2-10",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "I need to work remotely at home. What items should I take?",
+    "answer": "To work remotely at home, you'll need to have a few essential items to ensure a comfortable and productive work environment. Here's a list of items you might consider:\n\n\n1. **Workspace**: A dedicated workspace with a comfortable chair and a desk or table to support your laptop or desktop computer.\n\n2. **Electronics**: Laptop, desktop computer, and any necessary peripherals such as a keyboard, mouse, and external monitor.\n3. **Office Supplies**: Pens, paper, notebooks, sticky notes, a stapler, scissors, tape, and other stationery.\n4. **Comfortable Clothing**: Clothes that are comfortable to wear while working, including a shirt, pants, and possibly a sweater or sweater, depending on your work environment.\n5. **Headphones or Earbuds**: For privacy and to listen to music or take calls without disturbing others.\n6. **Cable Management**: To keep cords organized and prevent tangling.\n7. **External Hard Drive**: For backing up important files or transferring large files.\n8. **USB Drives**: For storing and transferring files.\n9. **Power Strip**: To manage multiple devices and avoid cluttering outlets.\n10. **Wireless Charging Pad**: For charging devices without cluttering your workspace.\n111. **Water Bottle**: To stay hydrated and maintain focus.\n12. **Healthy Snacks**: To keep your energy levels up and avoid hunger-related distractions.\n13. **Personal Care Items**: Toothbrush, toothpaste, soap, and other hygiene products.\n14. **Personal Items**: A clock, phone, wallet, and any other personal items you need to keep handy.\n15. **Personal Protective Equipment**: If you work with sensitive materials or need to follow specific safety protocols, such as gloves or safety glasses.\n16. **Lighting**: A desk lamp or natural light source to ensure good lighting for reading and working.\n17. **Personal Organization**: A planner, calendar, and any other tools to help you stay organized.\n18. **Decorative Items**: Pictures, plants, or other items that make your workspace feel more personal and comfortable.\n\n19. **Emergency Supplies**: A first aid kit, medications, and any other items you might need in case of an emergency.\n\n20. **Mask**: If you're required to wear one for health and safety reasons.\n\n\nRemember to tailor this list to your specific needs and the environment you'll be working in. Some items might not be necessary for everyone, and you may have specific work-related items that are not listed here.",
+    "category": "world knowledge",
+    "question_id": "2-11",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Where is my missing shoe?",
+    "answer": "It appears that you've lost a shoe in the image you've provided. It's located on the floor, near the bottom right corner, in front of a bench. It's a white shoe, and it seems to be a casual type, possibly a sneaker or a casual athletic shoe. If you're looking for it, you might want to check that area or ask someone to help you locate it.",
+    "category": "object state recognition",
+    "question_id": "2-12",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is there a hallway?",
+    "answer": "Yes, there is a hallway in the image. It appears to be a well-lit, indoor space with a clean and organized layout, featuring a variety of furniture such as benches, potted plants, and possibly lockers or storage cabinets. The flooring is tiled, and there are signs and decorations on the walls, suggesting it might be a public or institutional building.",
+    "category": "spatial understanding",
+    "question_id": "2-13",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Where can I possibly store my documents?",
+    "answer": "In the image, you can see a well-lit office or public building with various seating areas, plants, and a few pieces of furniture. There are also lockers or cabinets that could be used for storing documents. If you're looking for a place to store your documents securely within this environment, you might consider using one of the lockers or cabinets provided. These are typically found in common areas like this, designed for people to store personal belongings or work-related materials.",
+    "category": "functional reasoning",
+    "question_id": "2-14",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "If I want to drink coffee, what should I use?",
+    "answer": "In the image, there is a coffee machine visible on the right side, which you can use to make a cup of coffee. If you want to drink coffee, you can approach the coffee machine and follow the instructions provided on the machine to select your desired coffee strength, add any desired milk or cream, and enjoy your beverage.",
+    "category": "functional reasoning",
+    "question_id": "2-15",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "How many smiley faces are there on the trash cans?",
+    "answer": "There are three smiley faces on the trash cans in the image.",
+    "category": "attribute recognition",
+    "question_id": "2-16",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "If I want to do exercise, what should I use?",
+    "answer": "In the image, there is a soccer ball and a basketball, which are both great options for exercise. If you want to do a soccer workout, you can use the soccer ball to practice dribbling, passing, shooting, and other ball control exercises. For a basketball workout, you can use the basketball to work on dribbling, shooting, layups, and other basketball-specific skills. Both sports provide a good cardiovascular workout and can help improve your overall fitness, coordination, and agility. If you're looking for more specific exercises, you might want to consider incorporating drills or routines that target the muscles used in those sports, such as sprints, plyometrics, and strength training exercises for soccer, and shooting drills, layup drills, and agility exercises for basketball.",
+    "category": "world knowledge",
+    "question_id": "2-17",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "What sports can I play with items here?",
+    "answer": "In the image, you can see a variety of items that could be used for different sports or recreational activities. Here are some possibilities:\n\n\n1. Basketball: The sports ball in the middle of the floor is suitable for basketball.\n2. Frisbee: The flat, circular object could be used for playing with a frisbee.\n3. Table Tennis: The table in the room appears to be a table tennis table, which is suitable for playing table tennis.\n4. Ping Pong: The table also looks like it could be a ping pong table, which is suitable for playing table tennis.\n5. Badminton: The court markings and the net suggest that this could be a badminton court.\n\n\nThese are just a few possibilities based on the items visible in the image. The space seems to be designed for indoor sports and recreational activities.",
+    "category": "functional reasoning",
+    "question_id": "2-18",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is there red colored poster sticked next to the elevator?",
+    "answer": "Yes, there is a red poster stuck next to the elevator in the image.",
+    "category": "attribute recognition",
+    "question_id": "2-19",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Where can I possibly check announcement?",
+    "answer": "In the image you provided, there doesn't appear to be any obvious announcement boards or displays that are clearly visible. However, you might check the following areas:\n\n\n1. At the entrance or reception desk, there might be a bulletin board or information board where announcements are posted.\n2. The TV screens or monitors mounted on the walls could be displaying announcements or information.\n3. The noticeboards or information boards near the elevators or escalators could also contain announcements.\n4. The reception or information desk itself might have a display or a noticeboard specifically for announcements.\n\n5. If there's a security or information desk, they might have a display for announcements.\n6. The area could also have a digital display or a kiosk that provides information or announcements.\n\n\nIf you're looking for an announcement, you might need to check these areas or inquire with the staff at the reception or information desk for the most up-to-date information.",
+    "category": "functional reasoning",
+    "question_id": "2-20",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is there recyling bin for glass?",
+    "answer": "Yes, there is a recycling bin for glass in the image. It is typically placed near the entrance or exit of the building, often with a sign indicating where to deposit glass for recycling.",
+    "category": "attribute recognition",
+    "question_id": "2-21",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is there recyling bin for metal?",
+    "answer": "Yes, there is a recycling bin for metal in the image. It's located on the right side, near the entrance, and is clearly marked for that purpose.",
+    "category": "attribute recognition",
+    "question_id": "2-22",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "What is the latest location of white ball?",
+    "answer": "The white ball is located on the floor in the middle of the room, near the center.",
+    "category": "spatial understanding",
+    "question_id": "2-23",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is the plant bigger than the trash can?",
+    "answer": "Yes, the plant is significantly larger than the trash can in the image.",
+    "category": "object state recognition",
+    "question_id": "2-24",
+    "episode_history": "caree-v0/caree-2"
+  }
+]

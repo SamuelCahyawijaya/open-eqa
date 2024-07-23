@@ -51,7 +51,6 @@ def parse_args() -> argparse.Namespace:
     )
     args = parser.parse_args()
     assert args.results.exists()
-    assert args.dataset.exists()
     args.output_directory.mkdir(parents=True, exist_ok=True)
     args.output_path = args.output_directory / (args.results.stem + "-metrics.json")
     if args.verbose:

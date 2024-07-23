@@ -16,5 +16,7 @@ data/*
 !data/scannet/*
 !data/predictions
 !data/metrics
+!data/metrics-caree
+!data/predictions-caree
 
 assets/demo_frames/*
