@@ -6,12 +6,6 @@ from pathlib import Path
 import sys
 import numpy as np
 from tqdm import tqdm
-
-try:
-    import LLM.VideoLLaMA2.predict_utils as videollama2_predict
-    import LLM.LLaVANeXT.predict_utils as llava_next_predict 
-except:
-    print('cannot load video llm')
 # os.environ['OPENAI_API_KEY'] = '<OPENAI_API_KEY>'
 # os.environ['OPENAI_AZURE_DEPLOYMENT'] = '1'
 
@@ -77,10 +71,17 @@ def parse_args() -> argparse.Namespace:
     
 def main(args: argparse.Namespace):
     # Load Model
-    if args.method == 'videollama2':
+    if args.method == 'videollama2':        
+        try:
+            import LLM.VideoLLaMA2.predict_utils as videollama2_predict
+        except:
+            raise ImportError('cannot load video llm')
         tokenizer, model, processor = videollama2_predict.load_model()
-        
     elif args.method == 'llava-next':
+        try:
+            import LLM.LLaVANeXT.predict_utils as llava_next_predict 
+        except:
+            raise ImportError('cannot load video llm')
         tokenizer, model, processor, for_get_frames_num = llava_next_predict.load_model()
 
     # Load Dataset
@@ -110,7 +111,7 @@ def main(args: argparse.Namespace):
             assert "OPENAI_API_KEY" in os.environ
             image_paths = sorted(glob.glob(f"data/frames/{episode_history}/*.png"))
             filt_image_paths = []
-            for depth_img, rgb_img in zip(image_paths[::16], image_paths[1::16]):
+            for depth_img, rgb_img in zip(image_paths[::30], image_paths[1::30]):
                 filt_image_paths.append(depth_img)
                 filt_image_paths.append(rgb_img)
             
