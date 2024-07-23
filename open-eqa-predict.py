@@ -85,7 +85,7 @@ def main(args: argparse.Namespace):
         tokenizer, model, processor, for_get_frames_num = llava_next_predict.load_model()
 
     # Load Dataset
-    eqa_data = json.load(open("data/open-eqa-v0.json"))
+    eqa_data = json.load(open(args.dataset))
     if args.dry_run:
         eqa_data = eqa_data[:5]
         
