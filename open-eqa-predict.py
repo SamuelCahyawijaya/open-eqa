@@ -105,11 +105,11 @@ def main(args: argparse.Namespace):
     print('\nTop-5 Samples:')
     print(json.dumps(eqa_data[:5], indent=2))
 
+    last_episode_history  = None
     for i, item in tqdm(enumerate(eqa_data)):
         q = item["question"]
         g = item["answer"]
         episode_history = item["episode_history"]
-        last_episode_history  = None
 
         if args.method == 'blind-gpt4':
             # Ensure that OpenAI API key is set
