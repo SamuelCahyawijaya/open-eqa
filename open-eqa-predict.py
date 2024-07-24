@@ -19,6 +19,7 @@ try:
 except:
     print('cannot load openeqa')
 
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -69,6 +70,7 @@ def parse_args() -> argparse.Namespace:
         print("output path: {}".format(args.output_path))
     return args
     
+
 def get_video_path(args, episode_history):
     # convert Path to string
     dataset = str(args.dataset)
@@ -81,7 +83,20 @@ def get_video_path(args, episode_history):
         assert False, "Unknown dataset"
     return video_path
 
+
+def get_frames(args, episode_history):
+    dataset = str(args.dataset)
+    if "open-eqa-v0" in dataset:
+        frames = sorted(glob.glob(f"/share/open-eqa/frames/{episode_history}/*-rgb.png"))
+
+    elif "caree-eqa-v0" in dataset:
+        frames = sorted(glob.glob(f"/share/open-eqa/frames/{episode_history}/*-rgb.png"))
+
+    return frames
+
+
 def main(args: argparse.Namespace):
+
     # Load Model
     if args.method == 'videollama2':        
         try:
@@ -95,6 +110,15 @@ def main(args: argparse.Namespace):
         except:
             raise ImportError('cannot load video llm')
         tokenizer, model, processor, for_get_frames_num = llava_next_predict.load_model()
+    elif args.method == 'rag-vlm':
+        from rag_vlm.clip_retrieval import RAGWithCLIP
+        from rag_vlm.internvl import InternVL
+
+        # clip = RAGWithCLIP("openai/clip-vit-base-patch32")
+        clip = RAGWithCLIP("openai/clip-vit-large-patch14-336")
+
+        # vlm =  InternVL('OpenGVLab/InternVL2-1B')
+        vlm =  InternVL('OpenGVLab/InternVL2-8B')
 
     # Load Dataset
     eqa_data = json.load(open(args.dataset))
@@ -106,7 +130,7 @@ def main(args: argparse.Namespace):
     print(json.dumps(eqa_data[:5], indent=2))
 
     last_episode_history  = None
-    for i, item in tqdm(enumerate(eqa_data)):
+    for i, item in tqdm(enumerate(eqa_data), total=len(eqa_data)):
         q = item["question"]
         g = item["answer"]
         episode_history = item["episode_history"]
@@ -118,6 +142,7 @@ def main(args: argparse.Namespace):
                 question=q,
                 openai_model="gpt-4o",
             )
+        
         elif args.method == 'gpt4o':
             # Ensure that OpenAI API key is set
             assert "OPENAI_API_KEY" in os.environ
@@ -133,6 +158,7 @@ def main(args: argparse.Namespace):
                 openai_key=os.environ["OPENAI_API_KEY"],
                 openai_model="gpt-4o",
             )
+        
         elif args.method == 'videollama2':
             if last_episode_history != episode_history:
                 video_path = get_video_path(args, episode_history)
@@ -147,9 +173,26 @@ def main(args: argparse.Namespace):
                 last_episode_history = episode_history
             a = llava_next_predict.generate_reply(video_path, tensor, q, model, tokenizer)
 
+        elif args.method == 'rag-vlm':
+            if last_episode_history != episode_history:
+                frames = get_frames(args, episode_history)
+                print(f"Encoding {len(frames)} frames for {episode_history}")
+                clip.encode_frames(frames, batch_size=8)
+                last_episode_history = episode_history
+            image_paths = clip.search([q], n=5, do_visualization=False)[0]
+
+            prompt = f"""
+You are an intelligent question answering agent. I will ask you questions about an indoor space and you must provide an answer.
+You will be shown a set of images that have been collected from a single location.
+Given a user query, you must output direct and concise one-sentence answer to the question asked by the user.
+Images: {"<image>" * len(image_paths)}
+User Query: {q}"""
+            a, _ = vlm(prompt=prompt, image_paths=image_paths)
+
         elif args.method == 'concept-graph':
             # TODO: Concept Graph
             pass
+        
         else:
             raise ValueError(f'method `{args.method}` is not supported')
 
@@ -157,8 +200,11 @@ def main(args: argparse.Namespace):
         item["answer"] = a
         
         if args.verbose:
-            # print the question and the model's answer
-            print("Q{}: {} | G: {} | P: {}\n".format(i, q, g, a))
+            print('='*80)
+            print(f'Episode:     \t{episode_history}')
+            print(f'Question:    \t{q}')
+            print(f'Ground truth:\t{g}')
+            print(f'Prediction:  \t{a}')
 
     # Dump Results
     json.dump(eqa_data, open(args.output_path, 'w'), indent=2)
