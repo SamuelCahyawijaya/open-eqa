@@ -71,6 +71,7 @@ def parse_args() -> argparse.Namespace:
         print("output path: {}".format(args.output_path))
     return args
     
+<<<<<<< Updated upstream
 
 def get_video_path(args, episode_history):
     # convert Path to string
@@ -96,6 +97,8 @@ def get_frames(args, episode_history):
     return frames
 
 
+=======
+>>>>>>> Stashed changes
 def main(args: argparse.Namespace):
 
     # Load Model
@@ -151,27 +154,45 @@ def main(args: argparse.Namespace):
             assert "OPENAI_API_KEY" in os.environ
             image_paths = sorted(glob.glob(f"data/frames/{episode_history}/*.png"))
             filt_image_paths = []
-            for depth_img, rgb_img in zip(image_paths[::30], image_paths[1::30]):
-                filt_image_paths.append(depth_img)
-                filt_image_paths.append(rgb_img)
-            
-            a = ask_gpt4o(
-                question=q,
-                image_paths=filt_image_paths,
-                openai_key=os.environ["OPENAI_API_KEY"],
-                openai_model="gpt-4o",
-            )
-        
+            if 'caree' in episode_history:
+                for rgb_img in image_paths[::60]:
+                    filt_image_paths.append(rgb_img)
+            else:
+                for depth_img, rgb_img in zip(image_paths[::30], image_paths[1::30]):
+                    filt_image_paths.append(depth_img)
+                    filt_image_paths.append(rgb_img)
+
+            try:
+                # Ensure that OpenAI API key is set
+                assert "OPENAI_API_KEY" in os.environ
+                image_paths = sorted(glob.glob(f"data/frames/{episode_history}/*.png"))
+                filt_image_paths = []
+                if 'caree' in episode_history:
+                    for rgb_img in image_paths[::60]:
+                        filt_image_paths.append(rgb_img)
+                else:
+                    for depth_img, rgb_img in zip(image_paths[::60], image_paths[1::60]):
+                        filt_image_paths.append(depth_img)
+                        filt_image_paths.append(rgb_img)
+                
+                a = ask_gpt4o(
+                    question=q,
+                    image_paths=filt_image_paths,
+                    openai_key=os.environ["OPENAI_API_KEY"],
+                    openai_model="gpt-4o",
+                )
+            except:
+                a = '-'
         elif args.method == 'videollama2':
             if last_episode_history != episode_history:
-                video_path = get_video_path(args, episode_history)
+                video_path = f"/share/open-eqa/videos/{episode_history}-0.mp4"
                 tensor = videollama2_predict.get_video_tensor(video_path, processor, model)
                 last_episode_history = episode_history
             a = videollama2_predict.generate_reply(tensor, q, model, tokenizer)
             
         elif args.method == 'llava-next':
             if last_episode_history != episode_history:
-                video_path = get_video_path(args, episode_history)
+                video_path = f"/share/open-eqa/videos/{episode_history}-0.mp4"
                 tensor = llava_next_predict.get_video_tensor(video_path, processor, model, for_get_frames_num)
                 last_episode_history = episode_history
             a = llava_next_predict.generate_reply(video_path, tensor, q, model, tokenizer)
