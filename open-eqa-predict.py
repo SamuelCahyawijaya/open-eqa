@@ -66,12 +66,11 @@ def parse_args() -> argparse.Namespace:
     
     assert args.dataset.exists()    
     args.output_directory.mkdir(parents=True, exist_ok=True)
-    args.output_path = args.output_directory / (args.method + ("-dry_run" if args.dry_run else "") + f"-predictions-{datetime.datetime.now().strftime('%m%d')}.json")
+    args.output_path = args.output_directory / (args.method + ("-dry_run" if args.dry_run else "") + f"-{datetime.datetime.now().strftime('%m%d')}-predictions.json")
     if args.verbose:
         print("output path: {}".format(args.output_path))
     return args
     
-<<<<<<< Updated upstream
 
 def get_video_path(args, episode_history):
     # convert Path to string
@@ -97,8 +96,6 @@ def get_frames(args, episode_history):
     return frames
 
 
-=======
->>>>>>> Stashed changes
 def main(args: argparse.Namespace):
 
     # Load Model
