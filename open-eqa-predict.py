@@ -4,6 +4,7 @@ import glob
 import argparse
 from pathlib import Path
 import sys
+import datetime
 import numpy as np
 from tqdm import tqdm
 # os.environ['OPENAI_API_KEY'] = '<OPENAI_API_KEY>'
@@ -65,7 +66,7 @@ def parse_args() -> argparse.Namespace:
     
     assert args.dataset.exists()    
     args.output_directory.mkdir(parents=True, exist_ok=True)
-    args.output_path = args.output_directory / (args.method + ("-dry_run" if args.dry_run else "") + "-predictions.json")
+    args.output_path = args.output_directory / (args.method + ("-dry_run" if args.dry_run else "") + f"-predictions-{datetime.datetime.now().strftime('%m%d')}.json")
     if args.verbose:
         print("output path: {}".format(args.output_path))
     return args
@@ -114,11 +115,13 @@ def main(args: argparse.Namespace):
         from rag_vlm.clip_retrieval import RAGWithCLIP
         from rag_vlm.internvl import InternVL
 
-        # clip = RAGWithCLIP("openai/clip-vit-base-patch32")
-        clip = RAGWithCLIP("openai/clip-vit-large-patch14-336")
+        # clip = RAGWithCLIP("openai/clip-vit-base-patch32", source='huggingface')
+        # clip = RAGWithCLIP("openai/clip-vit-large-patch14-336", source='huggingface')
+        clip = RAGWithCLIP("ViT-H-14-378-quickgelu/dfn5b", source='open_clip')
 
         # vlm =  InternVL('OpenGVLab/InternVL2-1B')
-        vlm =  InternVL('OpenGVLab/InternVL2-8B')
+        # vlm =  InternVL('OpenGVLab/InternVL2-8B')
+        vlm =  InternVL('OpenGVLab/InternVL2-40B')
 
     # Load Dataset
     eqa_data = json.load(open(args.dataset))
@@ -179,7 +182,10 @@ def main(args: argparse.Namespace):
                 print(f"Encoding {len(frames)} frames for {episode_history}")
                 clip.encode_frames(frames, batch_size=8)
                 last_episode_history = episode_history
-            image_paths = clip.search([q], n=5, do_visualization=False)[0]
+            # image_paths = clip.search([q], top_k=5, do_visualization=False)[0]
+
+            (window, sigma) = (0, 0) if 'hm3d' in item['episode_history'] else (15, 4)
+            image_paths = clip.search(q, top_k=5, window=window, sigma=sigma, do_visualization=False)
 
             prompt = f"""
 You are an intelligent question answering agent. I will ask you questions about an indoor space and you must provide an answer.

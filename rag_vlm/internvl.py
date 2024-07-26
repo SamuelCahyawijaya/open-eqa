@@ -2,6 +2,7 @@ import numpy as np
 import torch
 import torchvision.transforms as T
 # from decord import VideoReader, cpu
+import math
 from PIL import Image
 from torchvision.transforms.functional import InterpolationMode
 from transformers import AutoModel, AutoTokenizer
@@ -118,15 +119,45 @@ def load_video(video_path, bound=None, input_size=448, max_num=1, num_segments=3
     pixel_values = torch.cat(pixel_values_list)
     return pixel_values, num_patches_list
 
+def split_model(model_name):
+    device_map = {}
+    world_size = torch.cuda.device_count()
+    num_layers = {
+        'InternVL2-1B': 24, 'InternVL2-2B': 24, 'InternVL2-4B': 32, 'InternVL2-8B': 32,
+        'InternVL2-26B': 48, 'InternVL2-40B': 60, 'InternVL2-Llama3-76B': 80}[model_name]
+    # Since the first GPU will be used for ViT, treat it as half a GPU.
+    num_layers_per_gpu = math.ceil(num_layers / (world_size - 0.5))
+    num_layers_per_gpu = [num_layers_per_gpu] * world_size
+    num_layers_per_gpu[0] = math.ceil(num_layers_per_gpu[0] * 0.5)
+    layer_cnt = 0
+    for i, num_layer in enumerate(num_layers_per_gpu):
+        for j in range(num_layer):
+            device_map[f'language_model.model.layers.{layer_cnt}'] = i
+            layer_cnt += 1
+    device_map['vision_model'] = 0
+    device_map['mlp1'] = 0
+    device_map['language_model.model.tok_embeddings'] = 0
+    device_map['language_model.model.embed_tokens'] = 0
+    device_map['language_model.output'] = 0
+    device_map['language_model.model.norm'] = 0
+    device_map['language_model.lm_head'] = 0
+    device_map[f'language_model.model.layers.{num_layers - 1}'] = 0
+
+    return device_map
 
 class InternVL:
 
     def __init__(self, model_path):
+
+        device_map = split_model(model_path.split('/')[-1])
+        print(device_map)
+
         self.model = AutoModel.from_pretrained(
             model_path,
             torch_dtype=torch.bfloat16,
             low_cpu_mem_usage=True,
-            trust_remote_code=True).eval().to('cuda')
+            device_map=device_map,
+            trust_remote_code=True).eval()#.to('cuda')
         self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
         # self.tokenizer.pad_token_id = self.tokenizer.eos_token_id
 
@@ -134,7 +165,7 @@ class InternVL:
 
         self.generation_config = dict(
             num_beams=1,
-            max_new_tokens=1024,
+            max_new_tokens=64,
             do_sample=False,
             pad_token_id=self.tokenizer.eos_token_id
         )
@@ -162,7 +193,7 @@ class InternVL:
         # for multi image, do # multi-image multi-round conversation, separate images (多图多轮对话，独立图像)
         all_pixel_values = []
         for image_path in image_paths:
-            pixel_values = load_image(image_path, max_num=self.max_num).to(torch.bfloat16).cuda()
+            pixel_values = load_image(image_path, max_num=self.max_num).to(torch.bfloat16)#.cuda()
             all_pixel_values.append(pixel_values)
 
         if len(all_pixel_values) == 1:

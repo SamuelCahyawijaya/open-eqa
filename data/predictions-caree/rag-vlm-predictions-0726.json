@@ -1,0 +1,352 @@
+[
+  {
+    "question": "What is the brown object next to the plant? ",
+    "answer": "The brown object next to the plant is a basketball.",
+    "category": "object recognition",
+    "question_id": "1-1",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the object next to the keyboard?",
+    "answer": "The object next to the keyboard is a globe.",
+    "category": "object recognition",
+    "question_id": "1-2",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the object that books and a clock are on?",
+    "answer": "The object that books and a clock are on is a blue bench.",
+    "category": "object recognition",
+    "question_id": "1-3",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the object next to the boxes?",
+    "answer": "The object next to the boxes is a globe.",
+    "category": "object recognition",
+    "question_id": "1-4",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the object that is leaning next to the yellow cabinet?",
+    "answer": "The object leaning next to the yellow cabinet is an umbrella.",
+    "category": "object recognition",
+    "question_id": "1-5",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What colors are sofa?",
+    "answer": "The sofas in the images are blue.",
+    "category": "attribute recognition",
+    "question_id": "1-6",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What color is the mug?",
+    "answer": "The mug in the image is white.",
+    "category": "attribute recognition",
+    "question_id": "1-7",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What color is the pair of shoes?",
+    "answer": "The pair of shoes in the image is black.",
+    "category": "attribute recognition",
+    "question_id": "1-8",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the object drawn on the yellow bin? ",
+    "answer": "The object drawn on the yellow bin is a face with a smile.",
+    "category": "attribute recognition",
+    "question_id": "1-9",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the color of the box underneath the white and purple box?",
+    "answer": "The color of the box underneath the white and purple box is blue.",
+    "category": "attribute recognition",
+    "question_id": "1-10",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is in between a pair of shoes and trash cans? ",
+    "answer": "A soccer ball is between the pair of shoes and the trash cans.",
+    "category": "spatial understanding",
+    "question_id": "1-11",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Is there space to put a baseball underneath the table? ",
+    "answer": "No, there is no space to put a baseball underneath the table.",
+    "category": "spatial understanding",
+    "question_id": "1-12",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Is there room for a chair in between the blue door and the blue sofa? ",
+    "answer": "No, there is no room for a chair in between the blue door and the blue sofa.",
+    "category": "spatial understanding",
+    "question_id": "1-13",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What is the furthest item on the sofa from the clock on the sofa?",
+    "answer": "The furthest item on the sofa from the clock is a white globe.",
+    "category": "spatial understanding",
+    "question_id": "1-14",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Is elevator door opened or closed?",
+    "answer": "The elevator door is closed.",
+    "category": "object state recognition",
+    "question_id": "1-15",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Is the area light turned on?",
+    "answer": "Yes, the area light is turned on.",
+    "category": "object state recognition",
+    "question_id": "1-16",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Is there natural light in the room?",
+    "answer": "No, there is no natural light in the room. The images show artificial lighting, and there are no visible windows or sources of natural light.",
+    "category": "object state recognition",
+    "question_id": "1-17",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Are the books opened?",
+    "answer": "No, the books are not opened.",
+    "category": "object state recognition",
+    "question_id": "1-18",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "I am tired and want to take a rest while waiting for the elevator to come. What should I do?",
+    "answer": "You can sit on the blue bench located near the elevator.",
+    "category": "functional reasoning",
+    "question_id": "1-19",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Where can I store a trophy that I earned?",
+    "answer": "You can store the trophy in the glass display cabinet on the right side of the room.",
+    "category": "functional reasoning",
+    "question_id": "1-20",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "how do I go down from the above floor to the below floor?",
+    "answer": "To go down from the above floor to the below floor, you should use the elevator located on the left side of the hallway.",
+    "category": "world knowledge",
+    "question_id": "1-21",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "What are the round shapes on the trash bins?",
+    "answer": "The round shapes on the trash bins are smiley faces.",
+    "category": "world knowledge",
+    "question_id": "1-22",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "How can I enter a room?",
+    "answer": "To enter a room, you can approach the door and either push it open if it is a push door or pull it open if it is a pull door. If the door requires a key, insert the key into the lock and turn it to unlock the door before pushing or pulling it open.",
+    "category": "world knowledge",
+    "question_id": "1-23",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "How many elevators are there?",
+    "answer": "There are two elevators in the image.",
+    "category": "object localization",
+    "question_id": "1-24",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Where is the white table?",
+    "answer": "The white table is located near the blue benches in the middle of the room.",
+    "category": "object localization",
+    "question_id": "1-25",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "Where is blue door?",
+    "answer": "The blue door is located in the center of the hallway, slightly to the right.",
+    "category": "object localization",
+    "question_id": "1-26",
+    "episode_history": "caree-v0/caree-1"
+  },
+  {
+    "question": "How many pairs of shoes are there?",
+    "answer": "There are two pairs of shoes in the image.",
+    "category": "object recognition",
+    "question_id": "2-1",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "If I want to study about Python programming language, what should I do? ",
+    "answer": "To study Python programming language, you should start by reading the book titled \"Python Crash Course\" by Eric Matthes, which is the pink book in the image. This book is a comprehensive guide to learning Python and is suitable for beginners.",
+    "category": "functional reasoning",
+    "question_id": "2-2",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "If I want to study about Python programming language, which color of the book I should read?",
+    "answer": "To study Python programming language, you should read the book with the pink cover.",
+    "category": "attribute recognition",
+    "question_id": "2-3",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "I feel I need some suppliment, what should I do?",
+    "answer": "If you feel you need a supplement, it's important to consult with a healthcare professional first. They can help determine if a supplement is necessary and recommend the appropriate type and dosage based on your individual needs and health status.",
+    "category": "functional reasoning",
+    "question_id": "2-4",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Do you think the hallway should be cleaned?",
+    "answer": "Yes, the hallway should be cleaned. There are several items scattered on the floor, including shoes, a can, and other debris, which make the area look untidy and potentially hazardous.",
+    "category": "world knowledge",
+    "question_id": "2-5",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is there any missing item?",
+    "answer": "Based on the images provided, it appears that there are several items scattered on the floor, including a can, a shoe, and what looks like a remote control. It is not clear if these items are missing or if they were intentionally placed there. If these items are not supposed to be on the floor, they could",
+    "category": "object state recognition",
+    "question_id": "2-6",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is there anything that may be spilling? ",
+    "answer": "No, there is no indication of anything spilling in the images provided.",
+    "category": "world knowledge",
+    "question_id": "2-7",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Which ball has been moved?",
+    "answer": "The basketball has been moved.",
+    "category": "object state recognition",
+    "question_id": "2-8",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Where is the yellow colored globe in terms of location of baseketball?",
+    "answer": "The yellow-colored globe is located on the blue bench, which is positioned to the right of the basketball.",
+    "category": "spatial understanding",
+    "question_id": "2-9",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Where can I sit and rest?",
+    "answer": "You can sit and rest on the blue benches in the room.",
+    "category": "functional reasoning",
+    "question_id": "2-10",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "I need to work remotely at home. What items should I take?",
+    "answer": "To work remotely at home, you should take the following items:\n\n1. Laptop or computer\n2. Power adapter and cables\n3. Mouse and keyboard (if not using a laptop)\n4. Headphones or earphones\n5. Notebook and pen\n6. Any necessary software licenses or",
+    "category": "world knowledge",
+    "question_id": "2-11",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Where is my missing shoe?",
+    "answer": "Your missing shoe is on the floor near the elevator.",
+    "category": "object state recognition",
+    "question_id": "2-12",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is there a hallway?",
+    "answer": "Yes, there is a hallway in the images.",
+    "category": "spatial understanding",
+    "question_id": "2-13",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Where can I possibly store my documents?",
+    "answer": "You can possibly store your documents in the blue bookcase located in the corner of the room.",
+    "category": "functional reasoning",
+    "question_id": "2-14",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "If I want to drink coffee, what should I use?",
+    "answer": "If you want to drink coffee, you should use the white bin labeled \"\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e01\u0e32\u0e41\u0e1f\" (coffee cup).",
+    "category": "functional reasoning",
+    "question_id": "2-15",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "How many smiley faces are there on the trash cans?",
+    "answer": "There are three smiley faces on the trash cans.",
+    "category": "attribute recognition",
+    "question_id": "2-16",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "If I want to do exercise, what should I use?",
+    "answer": "If you want to do exercise, you can use the soccer ball and the space in the hallway.",
+    "category": "world knowledge",
+    "question_id": "2-17",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "What sports can I play with items here?",
+    "answer": "You can play basketball and soccer with the items present in the images.",
+    "category": "functional reasoning",
+    "question_id": "2-18",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is there red colored poster sticked next to the elevator?",
+    "answer": "No, there is no red-colored poster stuck next to the elevator in the images provided.",
+    "category": "attribute recognition",
+    "question_id": "2-19",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Where can I possibly check announcement?",
+    "answer": "You can check announcements on the bulletin board located on the wall near the elevators.",
+    "category": "functional reasoning",
+    "question_id": "2-20",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is there recyling bin for glass?",
+    "answer": "Yes, there is a recycling bin for glass. Look for the bin labeled with a glass bottle icon.",
+    "category": "attribute recognition",
+    "question_id": "2-21",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is there recyling bin for metal?",
+    "answer": "Yes, there is a recycling bin for metal. Look for the bin labeled with the recycling symbol and the word \"metal\" (\u91d1\u5c5e).",
+    "category": "attribute recognition",
+    "question_id": "2-22",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "What is the latest location of white ball?",
+    "answer": "The latest location of the white ball is in the corridor, near the blue bench.",
+    "category": "spatial understanding",
+    "question_id": "2-23",
+    "episode_history": "caree-v0/caree-2"
+  },
+  {
+    "question": "Is the plant bigger than the trash can?",
+    "answer": "Yes, the plant is bigger than the trash can.",
+    "category": "object state recognition",
+    "question_id": "2-24",
+    "episode_history": "caree-v0/caree-2"
+  }
+]
